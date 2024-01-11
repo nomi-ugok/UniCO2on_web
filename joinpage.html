@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="joinpage.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alef&family=Shippori+Mincho&display=swap" rel="stylesheet">
+
+    <title>UniCO2on</title>
+</head>
+
+<body>
+    <div id="jump5" class="nav">
+        <div class="circle">
+            <div class="circle1"></div>
+            <div class="circle2"></div>
+            <div class="circle3"></div>
+        </div>
+
+        <div class="howto">
+            <p>情報入力</p>
+            <p>内容確認</p>
+            <p>予約完了</p>
+        </div>
+    </div>
+
+    <h2>予約ページ</h2>
+
+
+    <div class="form">
+        <div id="schoolSearch">
+            <h4>学校名</h4>
+            <input id="input" type="text">
+        </div>
+
+        <div id="schoolgrade">
+            <h4>学年</h4>
+            <label><input type="radio" name="group1" value="1年">1年</label>
+            <label><input type="radio" name="group1" value="2年">2年</label>
+            <label><input type="radio" name="group1" value="3年">3年</label>
+            <label><input type="radio" name="group1" value="卒業生">卒業生</label>
+        </div>
+
+        <div id="schoolclass">
+            <h4>クラス(在学生のみ)</h4>
+            <input id="inputA" type="text">
+        </div>
+
+        <div id="schoolnumber">
+            <h4>出席番号(在学生のみ)</h4>
+            <input id="inputB" type="text">
+        </div>
+
+        <div id="name">
+            <h4>予約者氏名</h4>
+            <input id="inputC" type="text"><input id="inputD" type="text">
+        </div>
+
+        <div id="name_hiragana">
+            <h4>予約者氏名(全角ひらがな)</h4>
+            <input id="inputE" type="text"><input id="inputF" type="text">
+        </div>
+
+        <div id="mail">
+            <h4 for="dataInput">メールアドレス</h4>
+            <input id="inputG" type="text">
+        </div>
+
+        <div id="howtake">
+            <h4 for="dataInput">持参するもの(シャツ、ブレザーなど)</h4>
+            <input id="inputH" type="text">
+        </div>
+
+        <div id="howmany">
+            <h4 for="dataInput">持参する物の点数</h4>
+            <input id="inputI" type="text">
+        </div>
+    </div>
+
+
+    <button id="submit">確認</button>
+
+
+    <footer>
+        <a href="index.html">
+            <img class="UniCO2onLogo_down" src="/img/UniCO2on_down.png">
+        </a>
+        <a href="#jump5"><img class="gotopLogo" src="/img/gotop.png"></a>
+    </footer>
+
+    <script>
+        const storage = localStorage;
+
+        const input = document.getElementById('input');
+        const inputA = document.getElementById('inputA');
+        const inputB = document.getElementById('inputB');
+        const inputC = document.getElementById('inputC');
+        const inputD = document.getElementById('inputD');
+        const inputE = document.getElementById('inputE');
+        const inputF = document.getElementById('inputF');
+        const inputG = document.getElementById('inputG');
+        const inputH = document.getElementById('inputH');
+        const inputI = document.getElementById('inputI');
+
+        const submit = document.getElementById('submit');
+        // const selectedValue = document.querySelector('input[name="group1"]:checked');
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const storagedData = storage.store;
+        });
+
+        submit.addEventListener('click', () => {
+            storage.store = JSON.stringify({
+                school: input.value,
+                // grade: selectedValue.value,
+                class: inputA.value,
+                number: inputB.value,
+                firstName: inputC.value,
+                lastName: inputD.value,
+                h_firstName: inputE.value,
+                h_lastName: inputF.value,
+                mail: inputG.value,
+                take: inputH.value,
+                many: inputI.value
+            });
+        });
+
+        const link = document.getElementById('submit');
+
+        link.addEventListener('click', () => {
+            location.href = 'joinpage_2.html';
+        });
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio Button Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form id="radioForm">
+        <label>
+        <input type="radio" name="message" value="Message 1"> Message 1
+    </label>
+        <br>
+        <label>
+        <input type="radio" name="message" value="Message 2"> Message 2
+    </label>
+        <br>
+        <label>
+        <input type="radio" name="message" value="Message 3"> Message 3
+    </label>
+        <br>
+        <label>
+        <input type="radio" name="message" value="Message 4"> Message 4
+    </label>
+        <br>
+        <input type="button" value="Submit" onclick="submitForm()">
+    </form>
+
+
+    <div id="result"></div>
+
+    <script>
+        function submitForm() {
+            // 選択されたラジオボタンの値を取得
+            var selectedValue = document.querySelector('input[name="message"]:checked');
+
+            // 選択されていない場合のエラーチェック
+            if (!selectedValue) {
+                alert("ラジオボタンを選択してください。");
+                return;
+            }
+
+            // 結果を表示する要素に選択されたメッセージを表示
+            document.getElementById('result').innerText = "選択されたメッセージ: " + selectedValue.value;
+
+            // ページ遷移（ここでは単純な例として、新しいページにリダイレクト）
+            window.location;
+        }
+    </script>
+
+</body>
+
+</html> -->

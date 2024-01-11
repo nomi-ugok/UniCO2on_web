@@ -1,0 +1,363 @@
+html {
+  background-color: white;
+  scroll-behavior: smooth;
+
+}
+
+nav {
+  display: flex;
+  max-height: 35px;
+  padding-top: 15px;
+  padding-bottom: 30px;
+}
+
+.UniCO2onLogo_top {
+  margin-left: 15px;
+}
+
+.joinButton_top {
+  margin-left: 70px;
+}
+
+/* ハンバーガーメニューボタン装飾 */
+.menu-btn {
+  margin-right: 5px;
+    /* right: 10px; */
+    display: flex;
+    border-radius: 40px;
+    height: 40px;
+    width: 40px;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    background-color: #284D28;
+    position: fixed;
+    right: calc((100% - 375px) / 2 );
+}
+.menu-btn span,
+.menu-btn span:before,
+.menu-btn span:after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 20px;
+    border-radius: 1px;
+    background-color: #ffffff;
+    position: absolute;
+}
+.menu-btn span:before {
+    bottom: 7px;
+}
+.menu-btn span:after {
+    top: 7px;
+}
+
+#menu-btn-check {
+  display: none;
+}
+
+#menu-btn-check:checked ~ .menu-btn span {
+  background-color: rgba(255, 255, 255, 0);/*メニューオープン時は真ん中の線を透明にする*/
+}
+#menu-btn-check:checked ~ .menu-btn span::before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+#menu-btn-check:checked ~ .menu-btn span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+
+/* ハンバーガーメニュー　　ボタン押した後の動作*/
+.menu-content {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 80;
+  background-color: #284D28;
+}
+
+.menu-content ul {
+  padding: 70px 10px 0;
+}
+
+.menu-content ul li {
+  border-bottom: solid 1px #ffffff;
+  list-style: none;
+}
+.menu-content ul li a {
+  display: block;
+  width: 100%;
+  font-size: 15px;
+  box-sizing: border-box;
+  color:#ffffff;
+  text-decoration: none;
+  padding: 9px 15px 10px 0;
+  position: relative;
+}
+
+.menu-content ul li a::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-top: solid 2px #ffffff;
+  border-right: solid 2px #ffffff;
+  transform: rotate(45deg);
+  position: absolute;
+  right: 11px;
+  top: 16px;
+}
+
+.menu-content {
+  max-width: 375px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 100%;/*leftの値を変更してメニューを画面外へ*/
+  z-index: 80;
+  background-color: #284D28;
+  opacity: 0.75;
+  transition: all 0.5s;/*アニメーション設定*/
+}
+
+#menu-btn-check:checked ~ .menu-content {
+    left: calc((100% - 375px) / 2 );/*メニューを画面内へ*/
+}
+
+
+
+
+
+.UniCO2onLogo_top {
+  width: 30%;
+  /* margin-left: 10px; */
+}
+
+.joinButton_top {
+  width: 30%;
+}
+
+.hambergerMenu {
+  width: 40%;
+  margin-right: 0px;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 375px;
+  min-height: 5200px;
+  background-color: #f7f1eb;
+  font-family: 'Shippori Mincho', serif;
+  text-align: center;
+  color: #284D28;
+ 
+  /* margin-top: 100px; */
+}
+
+header {
+  background-image: url(/img/top_background.png);
+  background-size: cover;
+  margin-bottom: 50px;
+}
+
+.header_one {
+  padding-top: 167px;
+  padding-bottom: 288px;
+  font-size: 17px;
+}
+
+.header_one {
+  font-size: 15px;
+  /* margin-bottom: 100px; */
+}
+
+#jump0 {
+  padding-top: 100px;
+}
+
+.header_two {
+  font-size: 14px;
+}
+
+.logo {
+  margin: 30px;
+  max-width: 200px;
+}
+
+ /* div > h1 {
+  font-family: 'Alef', sans-serif;
+  display: inline-block;
+  border-bottom: #284D28 solid 2px;
+ } */
+
+ /* div > h2 {
+  font-size: 18px;
+ } */
+
+#jump1 {
+  padding-top: 30px;
+}
+
+.detail_one {
+  margin: 30px 0px 30px 50px;
+  border: #284D28 3px solid;
+  border-radius: 15px 0px 0px 15px;
+}
+
+ img.ex_one {
+  width: 85%;
+ } 
+
+ .detail_one > h1 {
+  font-family: 'Alef', sans-serif;
+  display: inline-block;
+  border-bottom: #284D28 solid 2px;
+ }
+
+ .detail_one > h2 {
+  font-size: 18px;
+ }
+
+ .detail_one > p {
+  text-align: left;
+  font-size: 13px;
+  margin: 30px;
+ }
+
+
+
+ #jump2 {
+  padding-top: 60px;
+}
+
+ .detail_two {
+  background-color: #284D28;
+  color: #f7f1eb;
+  margin-right: 50px;
+  margin-bottom: 40px;
+  border: #284D28 3px solid;
+  border-radius: 0px 15px 15px 0px;
+ }
+
+ img.ex_two {
+  width: 85%;
+ } 
+
+ .detail_two > h1 {
+  font-family: 'Alef', sans-serif;
+  display: inline-block;
+  border-bottom: #f7f1eb solid 2px;
+ }
+
+ .detail_two > h2 {
+  font-size: 18px;
+ }
+
+ .detail_two > p {
+  text-align: left;
+  font-size: 13px;
+  margin: 30px;
+ }
+
+
+ #jump3 {
+  padding-top: 30px;
+}
+
+ .detail_three {
+  margin: 30px 0px 30px 50px;
+  border: #284D28 3px solid;
+  border-radius: 15px 0px 0px 15px;
+ }
+
+ img.ex_three {
+  width: 85%;
+ } 
+
+ .detail_three > h1 {
+  font-family: 'Alef', sans-serif;
+  display: inline-block;
+  border-bottom: #284D28 solid 2px;
+ }
+
+ .detail_three > h2 {
+  font-size: 18px;
+ }
+
+ .detail_three > p {
+  text-align: left;
+  font-size: 13px;
+  margin: 30px;
+ }
+
+
+ #jump4 {
+  padding-top: 60px;
+}
+
+ .detail_four {
+  background-color: #284D28;
+  color: #f7f1eb;
+  margin-right: 50px;
+  border: #284D28 3px solid;
+  border-radius: 0px 15px 15px 0px;
+ }
+
+ img.ex_four {
+  width: 85%;
+ } 
+
+ .detail_four > h1 {
+  font-family: 'Alef', sans-serif;
+  display: inline-block;
+  border-bottom: #f7f1eb solid 2px;
+ }
+
+ .detail_four > h2 {
+  font-size: 18px;
+ }
+
+ .detail_four > p {
+  text-align: left;
+  font-size: 13px;
+  margin: 30px;
+ }
+
+
+
+
+
+ .close {
+  font-size: 14px;
+  padding: 200px 0px 100px 0px;
+ }
+
+ .join {
+  font-size: 14px;
+ }
+
+
+
+.joinButton_down {
+  width: 30%;
+  padding-bottom: 200px;
+}
+
+footer {
+  background-color: #284D28;
+}
+
+.UniCO2onLogo_down {
+  width: 35%;
+  margin-top: 10px;
+  margin-right: 240px;
+}
+
+.gotopLogo {
+  width: 20%;
+  margin-top: 20px;
+  margin-left: 280px;
+}
