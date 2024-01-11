@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alef&family=Shippori+Mincho&display=swap" rel="stylesheet">
+
+    <title>UniCO2on</title>
+</head>
+
+<div id="app"></div>
+
+<div id="jump5"></div>
+<nav>
+    <img class="UniCO2onLogo_top" src="/img/UniCO2on_top.png">
+    <a href="joinpage.html">
+        <img class="joinButton_top" src="/img/joinButton_top.png">
+    </a>
+
+    <input type="checkbox" id="menu-btn-check">
+    <label for="menu-btn-check" class="menu-btn"><span></span></label>
+
+    <form @submit.prevent autocomplete="off"></form>
+
+    <div class="menu-content">
+        <ul>
+            <li>
+                <a href="#jump0">UniCO2onの取り組み</a>
+            </li>
+            <li>
+                <a href="#jump1">01 衣服によるCO2排出量ってどのくらいなの？</a>
+            </li>
+            <li>
+                <a href="#jump2">02 制服一着でどれくらい<br />脱炭素化に貢献できるの？</a>
+            </li>
+            <li>
+                <a href="#jump3">03 どのような仕組みでリサイクルされるの？</a>
+            </li>
+            <li>
+                <a href="#jump4">04 リサイクルを行うことによる<br />私たちのメリットは？</a>
+            </li>
+        </ul>
+    </div>
+
+</nav>
+
+<body>
+    <header class="header_one">
+        <title>見出し</title>
+        <h1>着なくなった<br /> 制服
+            <br /> リサイクル
+            <br />しませんか？</h1>
+    </header>
+
+    <div class="header_two" id="jump0">
+        <p>
+            制服をリサイクルすると<br /> 〇〇％も二酸化炭素の排出を
+            <br /> 削減することができます。
+            <br />
+        </p>
+        <p>
+            そこで私たちは<br /> オーガニックコットンを使用した
+            <br /> 制服のリサイクルを行い、
+            <br /> 脱炭素社会を図る取り組みを
+            <br /> 「UniCO2on」と名付け
+            <br /> この取り組みを支援しています。
+        </p>
+        <img class="logo" src="/img/logo.svg">
+    </div>
+
+    <div id="jump1"></div>
+    <div class="detail_one">
+        <h1>01</h1>
+        <h2>
+            衣服によるCO2排出量って<br /> どのくらいなの？
+        </h2>
+        <img class="ex_one" src="/img/detail_one_img.png">
+        <p>
+            衣服は、原材料調達→紡績→染色→裁断・縫製の流れで工場で製造されます。
+        </p>
+        <p>
+            実は、この原材料調達から製造段階までに排出されるCO2は年間で約90,000kt!! 洋服一枚あたりに換算すると、500mlのペットボトル225本にもなります。
+        </p>
+        <p>
+            さらに、製造された衣服の95％は焼却され埋め立てられるため、衣服の廃棄にも多くのCO2が排出され離宮の環境に負荷がかかっていることがわかります。
+        </p>
+    </div>
+
+    <div id="jump2"></div>
+    <div class="detail_two">
+        <h1>02</h1>
+        <h2>
+            制服一着でどれくらい<br /> 脱炭素化に貢献できるの？
+        </h2>
+        <img class="ex_two" src="/img/detail_two_img.png">
+        <p>
+            オーガニックコットンを使用した繊維は、化学薬品を用いた従来の繊維よりもCO2を約50%削減することができます。
+        </p>
+        <p>
+            栽培段階においても、普通の綿花などに比べ大量栽培を行わないため、機械化農業に頼る必要がなく、化学薬品を用いた従来の繊維よりもCO2を約20%削減することができます。
+        </p>
+        <p>
+            また、通常衣服の焼却にはその衣服の倍のCO2が排出されますが、リサイクルを行うことで、例えば制服のブラウスで考えると1枚につき約400gのCO2を削減することができ、この量はペットボトル0.5本分に相当します。
+        </p>
+    </div>
+
+    <div id="jump3"></div>
+    <div class="detail_three">
+        <h1>03</h1>
+        <h2>
+            どのような仕組みで<br /> リサイクルされるの？
+        </h2>
+        <img class="ex_three" src="/img/detail_three_img.png">
+        <p>
+            着用しなくなった制服は学校を介して、制服を製造する工場に回収されます。その後工場では、回収した制服の生地をコットンに戻して新しい糸を生成します。その糸から生地を編み、新しい制服を製造します。このサイクルの循環によって、サスティナブルな制服製造を可能としています。
+        </p>
+    </div>
+
+    <div id="jump4"></div>
+    <div class="detail_four">
+        <h1>04</h1>
+        <h2>
+            リサイクルを行うことによる<br /> 私たちのメリットは？
+        </h2>
+        <img class="ex_four" src="/img/detail_four_img.png">
+        <p>
+            今までは、洋服を生産する上で発生する「裁断くず」を廃棄、あるいは燃やすなどをし、地球環境に悪影響を及ぼす方法を当たり前のように行っていました。祭壇くずは、生地全体の約3割にも値するとされ、これらの裁断くずは全て廃棄されている現状があります。
+        </p>
+        <p>
+            私たちは裁断くずを使用したハンガーを生成、また生成したハンガーを学生服をリサイクルしていただいた皆様に返礼品として贈呈することにより、脱炭素化への意識向上やリサイクル貢献を実感していただきたいと考えています。
+        </p>
+    </div>
+
+    <div class="close">
+        <p>
+            貴方の行動で環境は大きく変わります。
+        </p>
+        <p>
+            脱炭素化社会にご協力をお願いします。
+        </p>
+    </div>
+
+    <div class="join"></div>
+    <p>
+        ご予約はこちら
+    </p>
+    <a href="joinpage.html">
+        <img class="joinButton_down" src="/img/joinButton_down.png">
+    </a>
+    </div>
+</body>
+
+<footer>
+    <img class="UniCO2onLogo_down" src="/img/UniCO2on_down.png">
+    <a href="#jump5"><img class="gotopLogo" src="/img/gotop.png"></a>
+</footer>
+
+<script src="https://unpkg.com/petite-vue"></script>
+<script src="script.js"></script>
+
+</html>
